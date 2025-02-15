@@ -8,23 +8,26 @@ function App() {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFFzEY8As3jP3Q0eYZPjDvEqD0L1-Lk7APAQ&s",
   ];
 
-  const [imageIndex,setImageIndes]=useState(0)
+  const [imageIndex,setImageIndex]=useState(0)
 
 
   const handlePrev=()=>{
 
+    setImageIndex(imageIndex-1)
   }
 
-  const handleNext=()=>{}
+  const handleNext=()=>{
+    setImageIndex(imageIndex+1)
+  }
 
   return (
     <>
       <h1>Carousel</h1>
 
       <div className="card">
-        <button className="btn">Prev</button>
-        <img src={images[0]} alt="" className="img" />
-        <button className="btn">Next</button>
+        <button onClick={handlePrev} className="btn">Prev</button>
+        <img src={images[imageIndex]} alt="" className="img" />
+        <button onClick={handleNext} className="btn">Next</button>
       </div>
     </>
   );
