@@ -11,12 +11,8 @@ function App() {
     <>
       <h1>Carousel</h1>
 
-      <div>
-        {images.map((img, i) => (
-          <div className="card" key={i}>
-            <img  className="img" src={img} alt="" />
-          </div>
-        ))}
+      <div className="card">
+        <img src={images[0]} alt="" className="img" />
       </div>
     </>
   );
