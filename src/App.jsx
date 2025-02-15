@@ -12,7 +12,9 @@ function App() {
       <h1>Carousel</h1>
 
       <div className="card">
+        <button className="btn">Prev</button>
         <img src={images[0]} alt="" className="img" />
+        <button className="btn">Next</button>
       </div>
     </>
   );
